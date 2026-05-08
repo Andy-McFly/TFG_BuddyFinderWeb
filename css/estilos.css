@@ -1,0 +1,247 @@
+@font-face {
+    font-family: "miFuente";
+    src: url(../recursos/fuente/miFuente.ttf);
+}
+
+@font-face {
+    font-family: "miFuenteB";
+    src: url(../recursos/fuente/miFuenteB.ttf);
+}
+*{
+    font-family: "miFuente";
+    color: #4a2b00;
+}
+
+body{
+    background-color: #f3e4cc;
+    color: #333;
+    margin: 30px;
+    background-image: url("../recursos/img/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    background-color: #4CAF50;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    height: fit-content;
+    background-color: #4a2b00;
+    margin-top: 0;
+    border-radius: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.629);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 20px 40px;
+}
+
+nav a {
+    transition: 500ms;
+    text-decoration: none;
+    color: #f3e4cc;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: rgb(255, 98, 0);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.629);
+}
+nav a:hover {
+    transition: 500ms;
+    color: #4a2b00;
+    background-color: #f3e4cc;
+    border-radius: 17px;
+}
+nav a:active {
+    color: rgb(100, 95, 95);
+    background-color: rgb(205, 205, 205);
+    border-radius: 12px;
+}
+
+h1{
+    font-family: "miFuenteB";
+    text-shadow: 2px 2px 3px rgb(255, 98, 0);
+}
+
+.login-container{
+    width:300px;
+    margin:120px auto;
+    padding:30px;
+    background:#ffedcf;
+    text-align:center;
+    border-radius:12px;
+    box-shadow: 12px 12px 30px;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:12px;
+}
+
+#buscar{
+    width:150px;
+    padding:3px;
+    margin:3px;
+    margin-left: 10px;
+    border-radius:0;
+}
+
+button{
+    background-color: #FF9800;
+    color: white;
+    font-weight: bolder;
+    width:100%;
+    padding:10px;
+    margin-top: 10px;
+    border:none;
+    border-radius:20px;
+    box-shadow: 2px 2px 3px #4a2b00;
+    transition: 300ms;
+}
+
+button:hover {
+    background-color: #FFCC80;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+button:active{
+    box-shadow: inset 2px 2px 3px #4a2b00;
+}
+
+.buttonTabla{
+    border-radius:5px;
+    width: 90%;
+    padding: 5px;
+}
+
+#buttonAlta{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+#buttonAlta button{
+    width: 50%;
+}
+
+#tablaPerros, th, td{
+    border: 1px, solid, black;
+}
+
+#tablaPerros img{
+    cursor: pointer;
+}
+
+#tablaPerros img:hover{
+    border-radius: 3px;
+}
+
+#tablaPerros{
+    width: 100%;
+    padding: 10px;
+    background-color: gray;
+    border-radius:20px;
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.629);
+}
+
+th, td{
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius:10px;
+}
+
+td{
+    font-weight: bolder;
+}
+
+th{
+    font-family: "miFuenteB";
+}
+
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#imagenGrande {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bolder;
+    transition: 500ms;
+}
+
+a:hover
+{
+    color: #FF9800;
+    transition: 500ms;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 40px;
+}
+
+#mensajeError{
+    color:red;
+}
+
+.ajs-dialog {
+    border-radius: 30px !important;
+    text-align: center !important;
+    overflow: hidden;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.734) !important;
+}
+
+.ajs-message {
+    border-radius: 10px !important;
+}
+
+.ajs-button {
+    align-self: center !important;
+    border-radius: 8px !important;
+    background: #ffe5b8 !important;
+    width: 30% !important;
+    margin: 30px !important;
+}
+
+#logo{
+    width: 128px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.355);
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BuddyFinder: Historial de bajas</title>
+    <link rel="icon" href="./recursos/img/favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/historico.js"></script>
+  </head>
+
+  <body onload="comprobarLogin()">
+    <nav>
+      <ul class="menu">
+        <li><a href="panel.html">Panel principal</a></li>
+        <li><a href="solicitudes.html">Solicitudes de adopción</a></li>
+        <li><a href="cambiarPassword.html">Cambiar contraseña</a></li>
+        <li><a href="" onclick="logout()">Cerrar sesión</a></li>
+        <li><a target="_blank" href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <h1>Historial de bajas</h1>
+
+    Motivo:
+    <select id="filtroMotivo">
+      <option value="TODOS">Todos</option>
+      <option value="ADOPTADO">Adoptados</option>
+      <option value="TRANSFERENCIA">Transferencias</option>
+      <option value="OTROS">Otros</option>
+    </select>
+
+    <table id="tablaHistorico" width="100%">
+      <thead>
+        <tr>
+          <th>Código ID</th>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Raza</th>
+          <th>Edad</th>
+          <th>Fecha entrada</th>
+          <th>Fecha salida</th>
+          <th>Motivo</th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+
+    <footer>
+      <p>Andrés Martínez Romero - Proyecto Integrado, Curso 2025/2026</p>
+    </footer>
+  </body>
+</html>

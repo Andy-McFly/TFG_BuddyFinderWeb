@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>BuddyFinder: Editar</title>
+    <link rel="icon" href="./recursos/img/favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/estilosForm.css" />
+    <script src="js/login.js"></script>
+    <script src="js/editar.js"></script>
+  </head>
+
+  <body onload="comprobarLogin()">
+    <h1>Editar Datos</h1>
+
+    <form id="formPerro">
+      <div>
+        Nombre: <input type="text" id="nombre" /><br /><br />
+        Edad: <select id="edad"></select> años
+        <script>
+          for (var i = 0; i <= 16; i++) 
+          {
+            $("#edad").append("<option value='" + i + "'>" + i + "</option>");
+          }
+        </script>
+        <br /><br />
+        Raza: <input type="text" id="raza" /><br /><br />
+        Fecha de alta: <input type="date" id="alta" /><br /><br />
+        Tamaño:
+        <select id="tamano">
+          <option value="Pequeño">Pequeño</option>
+          <option value="Mediano">Mediano</option>
+          <option value="Grande">Grande</option>
+        </select><br /><br />
+        Descripción:<br />
+        <textarea id="descripcion"></textarea><br /><br />
+        Foto: <input type="file" id="foto" accept=".jpg" /><br /><br />
+      </div>
+    </form>
+
+    <button type="button" onclick="modificarPerro()">Guardar</button>
+    <button id="buttonVolver" onclick="volver()">Volver</button>
+  </body>
+</html>

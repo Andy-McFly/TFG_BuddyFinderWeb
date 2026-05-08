@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BuddyFinder: Acceso Refugios</title>
+    <link rel="icon" href="./recursos/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/login.js"></script>
+  </head>
+
+  <body>
+    <div class="login-container">
+      <img id="logo" src="./recursos/img/favicon.png" alt="Logo"/>
+      <h1>BuddyFinder</h1>
+      <h3>Acceso para Refugios</h3>
+
+      <input type="email" id="email" placeholder="Email del refugio" />
+
+      <input type="password" id="password" placeholder="Contraseña" />
+
+      <button onclick="login()">Entrar</button>
+
+      <p id="mensajeError"></p>
+    </div>
+    <p style="text-align: center; margin-bottom: 10%;">
+      Si tu refugio no está registrado y os interesa formar parte de 
+      nuestra familia, ponte en <a target="_blank" href="./contacto.html">contacto</a> con nosotros.
+    </p>
+  </body>
+</html>

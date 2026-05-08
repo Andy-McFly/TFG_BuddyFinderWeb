@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BuddyFinder: Panel principal</title>
+    <link rel="icon" href="./recursos/img/favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/panel.js"></script>
+  </head>
+
+  <body onload="comprobarLogin()">
+    <nav>
+      <ul class="menu">
+        <li><a href="historico.html">Historial de bajas</a></li>
+        <li><a href="solicitudes.html">Solicitudes de adopción</a></li>
+        <li><a href="cambiarPassword.html">Cambiar contraseña</a></li>
+        <li><a href="" onclick="logout()">Cerrar sesión</a></li>
+        <li><a target="_blank" href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <h1 id="nombreRefugio"></h1>
+    <h2 id="ciudadRefugio"></h2>
+
+    <div id="avisoSolicitudes" style="display:none; margin:10px 0; font-weight:bold; color:#d92906;"></div>
+
+    Estado:
+    <select id="filtroEstado">
+      <option value="todos">Todos</option>
+      <option value="0">Disponibles</option>
+      <option value="1">No disponibles</option>
+    </select>
+
+    Ordenar por:
+    <select id="orden">
+      <option value="nombre">Nombre</option>
+      <option value="fecha">Fecha alta</option>
+    </select>
+
+    <input type="text" id="buscar" placeholder="Buscar por nombre..." />
+
+    <table id="tablaPerros">
+      <thead>
+        <tr>
+          <th>Código ID</th>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Raza</th>
+          <th>Edad</th>
+          <th>Tamaño</th>
+          <th>Alta</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+
+    <div id="buttonAlta">
+      <button onclick="irNuevoPerro()">+ Añadir Perro</button>
+    </div>
+
+    <div id="visor" style="display: none">
+      <img id="imagenGrande" />
+    </div>
+  </body>
+</html>

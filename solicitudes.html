@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solicitudes</title>
+
+    <link rel="icon" href="./recursos/img/favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/solicitudes.js"></script>
+
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+      }
+
+      .buttonTabla {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body onload="comprobarLogin()">
+    <nav>
+      <ul class="menu">
+        <li><a href="historico.html">Historial de bajas</a></li>
+        <li><a href="panel.html">Panel principal</a></li>
+        <li><a href="cambiarPassword.html">Cambiar contraseña</a></li>
+        <li><a href="" onclick="logout()">Cerrar sesión</a></li>
+        <li><a target="_blank" href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <h1>Solicitudes recibidas</h1>
+
+    <select id="ordenFechaSolicitud">
+      <option value="DESC">Más recientes</option>
+      <option value="ASC">Más antiguas</option>
+    </select>
+    <select id="filtroEstadoSolicitud">
+      <option value="TODOS">Todos</option>
+      <option value="PENDIENTE">Pendiente</option>
+      <option value="RECIBIDA">Recibida</option>
+      <option value="ACEPTADA">Aceptada</option>
+      <option value="CANCELADA">Cancelada</option>
+    </select>
+    <table id="tablaSolicitudes">
+      <thead>
+        <tr>
+          <th>Perro</th>
+          <th>Usuario</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+
+  </body>
+</html>
